@@ -1,12 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
+// Components
+
+import { SiteComponent } from '../../modules/site/site.component';
+
+// Router 
+import { SiteRoutes } from './site.routing.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SiteComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(SiteRoutes),
   ]
 })
 

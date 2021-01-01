@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { from } from 'rxjs';
 
-// adding the layout
-
+// Components
 import {SiteComponent} from './layout/site/site.component';
 
 const routes: Routes = [
   {
-    path: '', component: SiteComponent, canActivate: [],
+    path: '', component: SiteComponent,
     children: [
-      { path: '', loadChildren: './layout/site/site.module#SiteModule' }
+      { path: '', loadChildren:  () => import('src/app/layout/site/site.module').then(m => m.SiteModule)}
     ]
   },
   { path: '**', redirectTo: '' }
