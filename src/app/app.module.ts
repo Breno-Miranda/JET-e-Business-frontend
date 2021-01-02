@@ -19,7 +19,7 @@ import { SiteComponent } from './layout/site/site.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
