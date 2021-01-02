@@ -3,6 +3,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 
 // Modules
+import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // Compoenets
@@ -17,7 +18,8 @@ import { SiteComponent } from './layout/site/site.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

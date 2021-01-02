@@ -5,11 +5,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 // Components
-
-import { SiteComponent } from '../../modules/site/site.component';
+import { SiteComponent } from 'src/app/modules/site/site.component';
 
 // Router 
 import { SiteRoutes } from './site.routing.module';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { SiteRoutes } from './site.routing.module';
   imports: [
     CommonModule,
     RouterModule.forChild(SiteRoutes),
-    NgbModule
+    NgbModule,
   ]
 })
 
