@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Compoenets
 import { AppComponent } from './app.component';
 import { SiteComponent } from './layout/site/site.component';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SiteComponent } from './layout/site/site.component';
     AppRoutingModule,
     NgbModule,
     SharedModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
