@@ -10,22 +10,26 @@ import { FooterComponent } from './common/footer/footer.component';
 import { CarouselComponent } from './common/widgets/carousel/carousel.component';
 import { MenuComponent } from './common/menu/menu.component';
 
+// Modules
+import { WidgetsModule } from './common/widgets/widgets.module';
+
 
 @NgModule({
   exports: [
     HeaderComponent,
     FooterComponent,
-    CarouselComponent,
-    MenuComponent
+    MenuComponent,
+    WidgetsModule,
+    CommonModule
   ],
   declarations: [
     HeaderComponent,
     FooterComponent,
-    CarouselComponent,
     MenuComponent,
   ],
   imports: [
     CommonModule,
+    WidgetsModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ]
 })

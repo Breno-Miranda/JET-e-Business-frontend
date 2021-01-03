@@ -10,14 +10,13 @@ export class StretchCardComponent implements OnInit {
   query: any;
   data: any;
 
-  @Input() Query;
-  @Input() Data;
+  @Input() Query: any;
+  @Input() Data: any;
 
   constructor() {}
 
   ngOnInit() { 
     this.query = this.Query; 
     this.data = this.Data; 
-    // console.log(this.Data)
   }
 }
