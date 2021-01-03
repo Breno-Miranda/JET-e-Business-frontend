@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SiteComponent implements OnInit {
 
+  data = [
+    {src: '../../../assets/img/carousel/img-01.jpg' , title: 'img-01'},
+    {src: '../../../assets/img/carousel/img-02.jpg' , title: 'img-02'},
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
