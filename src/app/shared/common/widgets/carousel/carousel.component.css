@@ -1,0 +1,18 @@
+.tales {
+    width: 100%;
+  }
+  .carousel-inner{
+    width:100%;
+    max-height: 400px !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .carousel-inner > .carousel-item > img {
+    width:1000px;
+    height:657px;
+    margin: auto;
+
+  }
