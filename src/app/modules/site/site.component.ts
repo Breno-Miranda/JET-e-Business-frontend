@@ -12,6 +12,14 @@ export class SiteComponent implements OnInit {
     {src: '../../../assets/img/carousel/img-02.jpg' , title: 'img-02'},
   ];
 
+  sectionOne = [
+    {src: '../../../assets/img/sectionOne/roupa-de-banho.svg' , title: 'Moda Verão'},
+    {src: '../../../assets/img/sectionOne/calcao.svg' , title: 'Moda Masculina'},
+    {src: '../../../assets/img/sectionOne/roupa-de-banho.svg' , title: 'Moda Verão'},
+    {src: '../../../assets/img/sectionOne/calcao.svg' , title: 'Moda Masculina'},
+    
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

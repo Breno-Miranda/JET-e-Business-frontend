@@ -1,5 +1,15 @@
-<app-carousel [Data]="data"></app-carousel>
-
 <div class="container">
-    
+
+    <app-carousel [Data]="data"></app-carousel>
+
+
+    <div class="row">
+        <div class="line mb-3 mx-auto"></div>
+        <div class="d-md-flex px-5 justify-content-around bd-highlight col-md-12 pt-5 pb-5 mb-3">
+            <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0" *ngFor="let item of sectionOne; let i = index">
+                <h6 class="places text-center">{{item.title}}</h6>
+                <img src="{{item.src}}" width="80" class="rounded mx-auto d-block" alt="...">
+            </div>
+        </div>
+    </div>
 </div>
