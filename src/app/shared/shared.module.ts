@@ -15,7 +15,8 @@ import { MenuComponent } from './common/menu/menu.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    MenuComponent
   ],
   declarations: [
     HeaderComponent,
