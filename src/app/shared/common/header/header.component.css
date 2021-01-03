@@ -1,0 +1,11 @@
+.navbar{
+    background:#220B5E;
+}
+
+.navbar a {
+    color:#7654B4;
+
+    @include hover-focus {
+    color: #0f0; 
+    }  
+}

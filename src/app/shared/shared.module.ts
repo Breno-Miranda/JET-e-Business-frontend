@@ -8,6 +8,7 @@ import { FooterComponent } from './common/footer/footer.component';
 
 // widgets
 import { CarouselComponent } from './common/widgets/carousel/carousel.component';
+import { MenuComponent } from './common/menu/menu.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CarouselComponent } from './common/widgets/carousel/carousel.component'
     HeaderComponent,
     FooterComponent,
     CarouselComponent,
+    MenuComponent,
   ],
   imports: [
     CommonModule,
