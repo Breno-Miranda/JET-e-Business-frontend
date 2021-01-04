@@ -22,48 +22,7 @@ export class SiteComponent implements OnInit {
     {src: '../../../assets/img/sectionOne/calcao.svg' , title: 'Moda Masculina'},
   ];
 
-  produtcs = [
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-    {
-      title: 'roupa x',
-      src: '../../../assets/img/sectionOne/roupa-de-banho.svg',
-      description: 'essa roupa e uma roupa',
-    },
-  ];
+  produtcs: any;
 
   constructor(private productsSevice: ProductsService ) { }
 

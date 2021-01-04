@@ -10,7 +10,7 @@ export class ImageCardComponent implements OnInit {
 
   data = {
     title: '',
-    src: '',
+    url_image: '',
     description: '',
   };
 
