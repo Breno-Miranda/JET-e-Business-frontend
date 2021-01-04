@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+//Services 
+import { CategorysService } from 'src/app/services/categorys.service';
+
 @Component({
   selector: 'app-site',
   templateUrl: './site.component.html',
@@ -7,17 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SiteComponent implements OnInit {
 
+  categorys: any = {};
 
-  categorys: Object | undefined;
+  constructor(private categoryServices: CategorysService ) { }
 
-  constructor() { }
+  isloading=true;
 
   ngOnInit(): void {
-    this.categorys = [
-      {title: 'Categoria 1' , id: 1 },
-      {title: 'Categoria 2' , id: 2 },
-      {title: 'Categoria 3' , id: 3 }
-    ];
+    // categorys services
+    this.categoryServices.getAll().then( data => {
+      this.isloading=false;
+      this.categorys = data
+    });
   }
 
 }

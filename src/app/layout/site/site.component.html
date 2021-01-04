@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<app-menu [Data]="categorys" ></app-menu>
+<app-menu  *ngIf="!isloading" [Query]="categorys"></app-menu>
 
 <router-outlet></router-outlet>
 

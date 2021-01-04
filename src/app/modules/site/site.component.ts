@@ -23,13 +23,15 @@ export class SiteComponent implements OnInit {
   ];
 
   produtcs: any;
+  categorys: any;
 
-  constructor(private productsSevice: ProductsService ) { }
-
-  ngOnInit(): void {
+  constructor(private productsSevice: ProductsService) {
+    // products services
     this.productsSevice.getAll().subscribe( data => {
       this.produtcs = data
     });
-  }
+   }
+
+  ngOnInit(): void {}
 
 }
