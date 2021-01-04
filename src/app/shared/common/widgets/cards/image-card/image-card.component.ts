@@ -7,11 +7,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ImageCardComponent implements OnInit {
 
+
+  data = {
+    title: '',
+    src: '',
+    description: '',
+  };
+
   @Input() Data: any;
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
+    this.data = this.Data;
+   
   }
 
 }
