@@ -6,10 +6,14 @@ import { SharedModule } from '../shared/shared.module';
 
 // component
 import { SiteComponent } from './site/site.component';
+import { ProductsComponent } from './products/products.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
-    SiteComponent
+    SiteComponent,
+    ProductsComponent,
+    CheckoutComponent
   ],
   imports: [
     CommonModule,
