@@ -7,11 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ImageCardComponent implements OnInit {
 
-
   data = {
     title: '',
     url_image: '',
     description: '',
+    price: ''
   };
 
   @Input() Data: any;
