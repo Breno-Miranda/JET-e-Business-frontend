@@ -8,6 +8,7 @@ import { CheckoutComponent } from 'src/app/modules/checkout/checkout.component';
 export const SiteRoutes: Routes = [
   {path: '', component: SiteComponent},
   {path: 'produtos', component: ProductsComponent},
+  {path: 'produtos/:id/details', component: ProductsComponent},
   {path: 'carrinho', component: CheckoutComponent},
 ];
 

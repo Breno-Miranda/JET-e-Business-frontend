@@ -1,8 +1,8 @@
-<nav class="navbar">
+<nav class="navbar d-sm-block">
     <div class="container">
         <ul class="nav">
             <li class="nav-item" *ngFor="let item of data; let i = index">
-                <a [routerLink]="['/crisis-center', { foo: 'foo' }]"  class="nav-link {{ i == 0 ? 'active' : ''}}" >{{item.title}}</a>
+                <a href="#" class="nav-link {{ i == 0 ? 'active' : ''}}" [routerLink]="['produtos', item.id, 'details']">{{item.title}}</a>
             </li>
         </ul>
     </div>
