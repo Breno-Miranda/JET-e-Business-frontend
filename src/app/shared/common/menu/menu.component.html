@@ -2,8 +2,7 @@
     <div class="container">
         <ul class="nav">
             <li class="nav-item" *ngFor="let item of data; let i = index">
-                <a class="nav-link {{ i == 0 ? 'active' : ''}}"
-                    [routerLink]="['/category=',  item.id] ">{{item.title}}</a>
+                <a [routerLink]="['/crisis-center', { foo: 'foo' }]"  class="nav-link {{ i == 0 ? 'active' : ''}}" >{{item.title}}</a>
             </li>
         </ul>
     </div>

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // Redux
@@ -28,6 +30,7 @@ import { SiteComponent } from './layout/site/site.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    RouterModule,
     SharedModule,
     HttpClientModule,
     StoreModule.forRoot({}, {}),

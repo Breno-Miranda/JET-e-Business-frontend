@@ -1,5 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 import { ChartCardComponent } from './cards/chart-card/chart-card.component';
@@ -29,7 +30,8 @@ import { ImageCardComponent } from './cards/image-card/image-card.component';
     CarouselComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   schemas: [ NO_ERRORS_SCHEMA ]
 })
