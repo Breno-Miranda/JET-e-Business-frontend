@@ -3,6 +3,7 @@
     <div class="about text-left px-2 mt-3">
         <h5>{{data.title}}</h5> <span class="text-muted">{{data.description}}</span>
         <h3>{{data.price}}</h3>
-    </div> <span class="dot"><span class="inner-dot"><i class="fa fa-plus"></i></span></span>
+        <div>Current Count: {{ count$ | async }}</div>
+    </div> <span class="dot" (click)="add(data)"> <span class="inner-dot"><i class="fa fa-plus"></i></span></span>
 </div>
 <hr>

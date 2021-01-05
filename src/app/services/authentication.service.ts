@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 
 import { environment } from 'src/environments/environment';
 
-import { User } from 'src/app/shared/models/user';
+import { UserModel as User } from 'src/app/shared/models/user.model';
 
 @Injectable({ providedIn: 'root' })
 

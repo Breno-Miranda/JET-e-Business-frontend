@@ -19,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Compoenets
 import { AppComponent } from './app.component';
 import { SiteComponent } from './layout/site/site.component';
+import { cartReducer } from './shared/reducers/cart.reducer';
 
 
 @NgModule({
@@ -33,7 +34,10 @@ import { SiteComponent } from './layout/site/site.component';
     RouterModule,
     SharedModule,
     HttpClientModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot({
+      count: cartReducer
+    }),
+   
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
