@@ -1,19 +1,26 @@
-import { Action, createReducer, on } from '@ngrx/store';
-import { decrement, increment, reset } from '../models/actions/cart.action';
- 
-export const initialState = 0;
- 
-const _cartReducer = createReducer(
-  initialState,
-  on(increment, (state) => state + 1),
-  on(decrement, (state) => state - 1),
-  on(reset, (state) => 0)
-);
- 
-export function cartReducer(state: number | undefined, action: Action) {
+import { ActionTypes } from "../models/actions/types.action";
 
-    console.log(state);
-    console.log(action);
-    
-  return _cartReducer(state, action);
+const initialState: any = {
+  products: [],
+  total: 0, 
+};
+
+let total: number = 0;
+
+export function cartReducer(state = initialState  , action: any) {
+  switch (action.type) {
+    case  ActionTypes.Add:
+        return { 
+          ...state,
+          products: [...state.products, action.payload],
+          total: calculateTotal( action.payload ),
+        };
+    default:
+        return state;
+    }
+}
+
+function calculateTotal(products: any): number {
+  total += products.price;
+  return total;
 }

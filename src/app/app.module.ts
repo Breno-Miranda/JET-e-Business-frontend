@@ -20,6 +20,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SiteComponent } from './layout/site/site.component';
 import { cartReducer } from './shared/reducers/cart.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -35,9 +37,9 @@ import { cartReducer } from './shared/reducers/cart.reducer';
     SharedModule,
     HttpClientModule,
     StoreModule.forRoot({
-      count: cartReducer
+      cart: cartReducer
     }),
-   
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
