@@ -28,7 +28,6 @@ export class ImageCardComponent implements OnInit {
   ) { 
     this.cart$ = this.store.select(state => state.cart);
     console.log(this.cart$);
-    
   }
 
   ngOnInit(): void {
