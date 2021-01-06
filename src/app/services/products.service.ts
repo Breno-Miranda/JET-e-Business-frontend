@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
+import { ProductModel } from '../shared/models/product.model';
 
 @Injectable({ providedIn: 'root' })
 
@@ -13,7 +14,7 @@ export class ProductsService {
   
   
   getAll() {
-    return this.http.get<any[]>(`${environment.apiUrl}/api/products/`);
+    return this.http.get<ProductModel[]>(`${environment.apiUrl}/api/products/`);
   }
 
 }

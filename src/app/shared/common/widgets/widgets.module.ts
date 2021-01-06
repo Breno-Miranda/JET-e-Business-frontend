@@ -9,6 +9,7 @@ import { SimpleCardComponent } from './cards/simple-card/simple-card.component';
 import { StretchCardComponent } from './cards/stretch-card/stretch-card.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ImageCardComponent } from './cards/image-card/image-card.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +32,8 @@ import { ImageCardComponent } from './cards/image-card/image-card.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule, 
+    FormsModule 
   ],
   schemas: [ NO_ERRORS_SCHEMA ]
 })

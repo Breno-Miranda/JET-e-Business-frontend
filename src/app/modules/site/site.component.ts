@@ -23,6 +23,7 @@ export class SiteComponent implements OnInit {
   ];
 
   produtcs: any;
+  
   categorys: any;
 
   constructor(private productsSevice: ProductsService) {

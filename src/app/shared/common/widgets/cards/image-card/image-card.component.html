@@ -2,7 +2,37 @@
     <img src="{{data.url_image}}" width="200">
     <div class="about text-left px-2 mt-3">
         <h5>{{data.title}}</h5> <span class="text-muted">{{data.description}}</span>
-        <h3>{{data.price}}</h3>
-    </div> <span class="dot" (click)="add(data)"> <span class="inner-dot"><i class="fa fa-plus"></i></span></span>
+        <h3 class="mb-3">{{data.price | currency:'BRL':true:'1.2-2'}}</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <label>
+                <input type="radio" id="{{ data.id }}" name="{{ data.id }}" [(ngModel)]="data.size" [value]="'X'"> <span
+                    class="label-text"> X</span>
+            </label>
+        </div>
+        <div class="col-sm">
+            <label>
+                <input type="radio" id="{{ data.id }}" name="{{ data.id }}" [(ngModel)]="data.size" [value]="'XL'">
+                <span class="label-text"> XL</span>
+            </label>
+        </div>
+        <div class="col-sm">
+            <label>
+                <input type="radio" id="{{ data.id }}" name="{{ data.id }}" [(ngModel)]="data.size" [value]="'XLL'">
+                <span class="label-text"> XLL</span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-auto col-6">
+            <input class="form-control" type="number" [(ngModel)]="data.amount" name="amount" value="1">
+        </div>
+    </div>
+    <div class="row">
+        <span class="dot" (click)="add(data)">
+            <span class="inner-dot"><i class="fa fa-plus"></i></span>
+        </span>
+    </div>
 </div>
 <hr>

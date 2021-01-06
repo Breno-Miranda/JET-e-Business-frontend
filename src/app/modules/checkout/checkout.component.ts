@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-checkout',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckoutComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  cart$: Observable<string[]>;
+  dataCart!: any; 
+  
+  constructor(
+    private store: Store<{ cart: string[] }>,
+  ) { 
+    this.cart$ = this.store.select(state => state.cart);
+    this.cart$.subscribe(res => this.dataCart = res);
   }
 
+  ngOnInit(): void {}
 }

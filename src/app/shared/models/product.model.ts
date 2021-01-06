@@ -1,6 +1,7 @@
 export class ProductModel {
   public id!: number;
   public category_id!: string;
+  public title!: string;
   public category!: string;
   public description!: string;
   public price!: number;
@@ -9,4 +10,6 @@ export class ProductModel {
   public url_image!: string;
   public is_promotion!: boolean;
   public is_activate!: boolean;
+  public size!: string;
+  public amount!: number;
 }

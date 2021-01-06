@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 // types-actions
 import { Add } from 'src/app/shared/models/actions/types.action';
+import { ProductModel } from 'src/app/shared/models/product.model';
 
 @Component({
   selector: 'app-image-card',
@@ -12,26 +13,15 @@ import { Add } from 'src/app/shared/models/actions/types.action';
 })
 export class ImageCardComponent implements OnInit {
 
-  data = {
-    title: '',
-    price: '',
-    url_image: '',
-    description: '',
-  };
+  @Input() data = {} as ProductModel;
 
-  @Input() Data: any;
-  
-  cart$: Observable<string[]>;
+  size = new Array(101);
 
   constructor(
     private store: Store<{ cart: string[] }>,
-  ) { 
-    this.cart$ = this.store.select(state => state.cart);
-    console.log(this.cart$);
-  }
+  ) {  }
 
   ngOnInit(): void {
-    this.data = this.Data;
   }
 
   async add(product: any) {
