@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 // shared
 import { SharedModule } from '../shared/shared.module';
@@ -20,6 +21,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     CommonModule,
     SharedModule,
     RouterModule,
+    FormsModule
   ]
 })
 export class ModulesModule { }

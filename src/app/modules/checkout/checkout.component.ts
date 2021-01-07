@@ -10,7 +10,10 @@ import { Observable } from 'rxjs';
 export class CheckoutComponent implements OnInit {
 
   cart$: Observable<string[]>;
-  dataCart!: any; 
+
+  dataCart: any; 
+
+  _amount = new Array(101);
   
   constructor(
     private store: Store<{ cart: string[] }>,

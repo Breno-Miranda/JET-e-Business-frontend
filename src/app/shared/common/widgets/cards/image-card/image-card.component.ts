@@ -15,8 +15,6 @@ export class ImageCardComponent implements OnInit {
 
   @Input() data = {} as ProductModel;
 
-  size = new Array(101);
-
   constructor(
     private store: Store<{ cart: string[] }>,
   ) {  }
