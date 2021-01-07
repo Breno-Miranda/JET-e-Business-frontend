@@ -19,8 +19,6 @@ import { WidgetsModule } from './common/widgets/widgets.module';
     FooterComponent,
     MenuComponent,
     WidgetsModule,
-    CommonModule,
-    
   ],
   declarations: [
     HeaderComponent,

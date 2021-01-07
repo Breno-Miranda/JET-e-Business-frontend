@@ -39,3 +39,9 @@ var {
     max-height: 75px;
     object-fit: cover;
 }
+
+.table {
+    width: 100%;
+    margin-bottom: 0%;
+    color: #212529;
+}

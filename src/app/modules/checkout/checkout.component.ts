@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
+// action
+import { Remove } from 'src/app/shared/models/actions/types.action';
+
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -22,5 +25,10 @@ export class CheckoutComponent implements OnInit {
     this.cart$.subscribe(res => this.dataCart = res);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
+
+  async Remove(product: any) {
+    this.store.dispatch(Remove(product));
+  }
 }

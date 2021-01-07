@@ -3,8 +3,8 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#">Library</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Carrinho de compras</li>
+            <li class="breadcrumb-item"><a href="#">Produtos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Carrinhos</li>
         </ol>
     </nav>
 
@@ -28,12 +28,8 @@
                                 <h6 class="title text-truncate">{{item.title}}</h6>
                                 <dl class="param param-inline small">
                                     <dt>Tamanho: </dt>
-                                    <dd>XXL</dd>
+                                    <dd>{{item.size}}</dd>
                                 </dl>
-                                <!-- <dl class="param param-inline small">
-                                    <dt>Cor: </dt>
-                                    <dd>Orange color</dd>
-                                </dl> -->
                             </figcaption>
                         </figure>
                     </td>
@@ -49,7 +45,7 @@
                         </div> 
                     </td>
                     <td class="text-right">
-                        <a href="" class="btn btn-outline-danger"> × Remove</a>
+                        <button type="button" class="btn btn-outline-danger" (click)="Remove(item)"> × Remove</button>
                     </td>
                 </tr>
             </tbody>
