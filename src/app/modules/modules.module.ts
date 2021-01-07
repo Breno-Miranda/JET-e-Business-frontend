@@ -10,12 +10,16 @@ import { SharedModule } from '../shared/shared.module';
 import { SiteComponent } from './site/site.component';
 import { ProductsComponent } from './products/products.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ClientsComponent } from './clients/clients.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
     SiteComponent,
     ProductsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ClientsComponent,
+    OrdersComponent
   ],
   imports: [
     CommonModule,
