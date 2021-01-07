@@ -1,14 +1,6 @@
 body {
     background-color: #eee
 }
-
-.product {
-    height: 700px;
-    padding: 10px;
-    background-color: #fff;
-    position: relative
-}
-
 .about h4 {
     margin-bottom: -3px
 }

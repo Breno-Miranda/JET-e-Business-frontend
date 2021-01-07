@@ -4,7 +4,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
             <li class="breadcrumb-item"><a href="#">Produtos</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Carrinhos</li>
+            <li class="breadcrumb-item active" aria-current="page">Carrinho</li>
         </ol>
     </nav>
 
@@ -50,6 +50,13 @@
                 </tr>
             </tbody>
         </table>
-
     </div> 
+    <div class="row mb-5">
+        <div class="col">
+            <a class="btn btn-person-secondary btn-lg pull-right" (click)="Clear()">Cancelar pedido</a>
+        </div>
+        <div class="col">
+            <a href="#" class="btn btn-lg btn-person"  [routerLink]="['/clientes']">Proximo Passo</a>
+        </div>
+    </div>
 </div>

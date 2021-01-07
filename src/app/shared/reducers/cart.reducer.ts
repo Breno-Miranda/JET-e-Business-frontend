@@ -1,4 +1,4 @@
-import { ActionTypes } from "../models/actions/types.action";
+import { ActionTypes } from "../models/actions/cart.types.action";
 
 const initialState: any = {
   products: [] = [],
@@ -19,21 +19,22 @@ export function cartReducer(state = initialState, action: any) {
         quantidade: calculateQtd(action.type),
       };
     case ActionTypes.Remove:
-      const index = state.products.indexOf(action.payload);
-      state.products.splice(index, 1);
+      let index = state.products.indexOf(action.payload);
+      let state_products = state.products.filter((item: any) => item !== state.products[index])
+
       return {
         ...state,
-        products: [...state.products, action.payload],
+        products: state_products,
         total: calculateTotal(action.payload, action),
         quantidade: calculateQtd(action),
       };
     case ActionTypes.Clear:
-      state = [];
+      
       return {
-        ...state,
-        products: [...state.products, action.payload],
-        total: calculateTotal(action.payload, action),
-        quantidade: calculateQtd(action),
+        ...[],
+        products: [],
+        total: 0,
+        quantidade: 0,
       };
     default:
       return state;
@@ -48,8 +49,6 @@ function calculateTotal(products: any, action: any): number {
     case ActionTypes.Remove:
       total -= products.price;
       return total;
-    case ActionTypes.Clear:
-      return 0;
     default:
       return 0;
   }
@@ -63,8 +62,6 @@ function calculateQtd(action: any): number {
     case ActionTypes.Remove:
       quantidade -= 1;
       return quantidade;
-    case ActionTypes.Clear:
-      return 0;
     default:
       return 0;
   }

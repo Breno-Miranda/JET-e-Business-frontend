@@ -45,3 +45,13 @@ var {
     margin-bottom: 0%;
     color: #212529;
 }
+
+.btn-person{
+    background-color: #3B1D98;
+    color: #ffffff;
+}
+
+.btn-person-secondary{
+    background-color: #7654B4;
+    color: #ffffff;
+}

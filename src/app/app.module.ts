@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { StoreModule } from '@ngrx/store';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
@@ -6,9 +7,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
-// Redux
-import { StoreModule } from '@ngrx/store';
 
 // Core
 import { JwtInterceptor } from './core/authentication/jwt.interceptor';
@@ -21,10 +19,10 @@ import { AppRoutingModule } from './app-routing.module';
 // Compoenets
 import { AppComponent } from './app.component';
 import { SiteComponent } from './layout/site/site.component';
+
+// reducer
 import { cartReducer } from './shared/reducers/cart.reducer';
-
-
-// pipe
+import { clientReducer } from './shared/reducers/client.reducer';
 
 
 @NgModule({
@@ -40,7 +38,8 @@ import { cartReducer } from './shared/reducers/cart.reducer';
     SharedModule,
     HttpClientModule,
     StoreModule.forRoot({
-      cart: cartReducer
+      cart: cartReducer,
+      clint: clientReducer
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-clients',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientsComponent implements OnInit {
 
-  constructor() { }
+  cart$!: Observable<string[]>;
+  dataCart: any; 
+  model: any = {}; 
+
+  submitted = false;
+
+  constructor(
+    private store: Store<{ cart: string[] }>,
+  ) { }
 
   ngOnInit(): void {
+    this.cart$ = this.store.select(state => state.cart);
+    this.cart$.subscribe(res => this.dataCart = res);
+  }
+
+  onSubmit(){
+
+    this.submitted = true;
+    
+    alert('oi')
   }
 
 }

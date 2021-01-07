@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 // types-actions
-import { Add } from 'src/app/shared/models/actions/types.action';
+import { Add } from 'src/app/shared/models/actions/cart.types.action';
 import { ProductModel } from 'src/app/shared/models/product.model';
 
 @Component({

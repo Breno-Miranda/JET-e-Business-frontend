@@ -1,3 +1,13 @@
 .navbar{
     background: #3B1D98;
 }
+
+.navbar ul li a {
+    font-size: smaller;
+    color: #ffffff;
+}
+
+
+.navbar ul li a:hover {
+    color: #000000;
+}

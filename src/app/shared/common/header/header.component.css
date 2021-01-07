@@ -4,8 +4,19 @@
 
 .navbar a {
     color:#7654B4;
-
     @include hover-focus {
     color: #0f0; 
     }  
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+}
+
+.badge{
+    position: absolute;
+    margin-left: 5px;
+    font-size: 0.75rem;
+    background-color: #ffffff;
+    color: #220B5E;
 }
