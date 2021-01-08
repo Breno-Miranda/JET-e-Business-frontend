@@ -1,17 +1,17 @@
 <div class="container">
 
-    <app-carousel [Data]="data"></app-carousel>
+    <app-carousel [Data]="carousels"></app-carousel>
 
     <div class="row">
         <div class="d-md-flex px-5 justify-content-around bd-highlight col-md-12 pt-5 pb-5 mb-4">
-            <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0" *ngFor="let item of sectionOne; let i = index">
+            <div class="p-2 flex-fill bd-highlight mb-3 mb-md-0" *ngFor="let item of medias; let i = index">
                 <h6 class="places text-center">{{item.title}}</h6>
                 <img src="{{item.src}}" width="80" class="rounded mx-auto d-block" alt="...">
             </div>
         </div>
     </div>
 
-    <nav aria-label="breadcrumb ">
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">Início </li>
             <li class="breadcrumb-item" aria-current="page">Aa</li>

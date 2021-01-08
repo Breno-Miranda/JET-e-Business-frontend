@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.breadcrumb {
+    background-color: #3B1D98 !important;
+    color: #ffff !important;
+}
+.breadcrumb-item.active{
+    color: #7654B4 !important;
+}

@@ -39,7 +39,7 @@ import { clientReducer } from './shared/reducers/client.reducer';
     HttpClientModule,
     StoreModule.forRoot({
       cart: cartReducer,
-      clint: clientReducer
+      client: clientReducer
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],

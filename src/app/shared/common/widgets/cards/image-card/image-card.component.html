@@ -26,16 +26,19 @@
                 <span class="label-text"> XLL</span>
             </label>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-auto col-6">
-            <input class="form-control" type="number" [(ngModel)]="data.amount" name="amount" min="1" value="1">
+        <div class="col-sm">
+            
         </div>
     </div>
     <div class="row">
-        <span class="dot" (click)="add(data)">
+        <div class="col-6">
+            <input class="form-control" type="number" placeholder="QTD" [(ngModel)]="data.amount" name="amount" min="1" value="1">
+        </div>
+    </div>
+    <div class="row">
+        <button class="dot" ngbTooltip="You see, I show up on click!" triggers="click:blur" (click)="add(data)">
             <span class="inner-dot"><i class="fa fa-plus"></i></span>
-        </span>
+        </button>
     </div>
 </div>
 <hr>

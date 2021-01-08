@@ -1,5 +1,7 @@
 <div class="container mt-5">
 
+    <h3 class="box-title">Confirmação dos produtos (selecionados)</h3>
+
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
@@ -19,7 +21,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let item of dataCart.products; let i = index">
+                <tr *ngFor="let item of dataCart.products; ">
                     <td>
                         <figure class="media">
                             <div class="img-wrap"><img [src]="item.url_image"
@@ -34,8 +36,8 @@
                         </figure>
                     </td>
                     <td>
-                        <select class="form-control" [(ngModel)]="item.amount"  [name]="item.amount">
-                            <option *ngFor="let item of _amount; let i = index" [value]="i" [selected]="i == 1">{{i}}</option>
+                        <select class="form-control"  [(ngModel)]="item.amount" name="amount" (ngModelChange)="Recount()" >
+                            <option *ngFor="let a of amountCheck; let i = index" [value]="i" [selected]="i==1">{{i}}</option>
                         </select>
                     </td>
                     <td>

@@ -20,3 +20,13 @@
     background-color: #ffffff;
     color: #220B5E;
 }
+
+.cart {
+    margin: -5px;
+}
+.cart i {
+    font-size: 1.50rem;
+}
+.cart  span {
+    font-size: 0.75rem;
+}

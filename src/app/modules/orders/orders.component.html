@@ -1,76 +1,55 @@
 <div class="content">
     <div class="container">
+        <h3 class="box-title">Finalização de pedido #{{dataCart.order}}</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#">Carrinho</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Finalização de Pedido</li>
+            </ol>
+        </nav>
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-                <div class="box">
-                    <h3 class="box-title">Dados dos produtos</h3>
-                    <div class="plan-selection">
+                <div class="box over">
+                    <h3 class="box-title"> Lista de produtos </h3>
+                    <div class="plan-selection" *ngFor="let item of dataCart.products; let i = index">
                         <div class="plan-data">
-                            <input id="question1" name="question" type="radio" class="with-font" value="sel" />
-                            <label for="question1">Personal</label>
-                            <p class="plan-text">
-                                1 install | 25K visits/month | 10 GB local storage</p>
-                            <span class="plan-price">$29 / mo</span>
-                        </div>
-                    </div>
-                    <div class="plan-selection">
-                        <div class="plan-data">
-                            <input id="question2" name="question" type="radio" class="with-font" value="sel" />
-                            <label for="question2">Profesional</label>
-                            <p class="plan-text">
-                                Up to 10 installs | 100K visits/month | 20 GB local storage</p>
-                            <span class="plan-price">$99 / mo</span>
-                        </div>
-                    </div>
-                    <div class="plan-selection">
-                        <div class="plan-data">
-                            <input id="question3" name="question" type="radio" class="with-font" value="sel" />
-                            <label for="question3">Business</label>
-                            <p class="plan-text">Up to 25 installs | 400K visits/month | 30 GB local storage</p>
-                            <span class="plan-price">$249 / mo</span>
+                            <label for="question1">{{item.title}}</label>
+                            <p class="plan-text"> Tamanho: {{ item.size}} | Quantidade: {{ item.amount}}</p>
+                            <span class="plan-price">{{(item.price * item.amount) | currency:'BRL':true:'1.2-2'}}</span>
                         </div>
                     </div>
                 </div>
+                <span class="plan-price px-5" [hidden]="!dataCart.total">TOTAL: {{(dataCart.total) |
+                    currency:'BRL':true:'1.2-2'}}</span>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
                 <div class="widget">
-                    <h4 class="widget-title">Dados do cliente</h4>
+                    <h4 class="widget-title">Seus Dados #{{dataClient.id}}</h4>
                     <div class="summary-block">
                         <div class="summary-content">
                             <div class="summary-head">
-                                <h5 class="summary-title">Personal</h5>
-                            </div>
-                            <div class="summary-price">
-                                <p class="summary-text">$29 / mo</p>
-                                <span class="summary-small-text pull-right">1 month</span>
+                                <h5 class="summary-title">{{dataClient.name}}</h5>
                             </div>
                         </div>
                     </div>
                     <div class="summary-block">
                         <div class="summary-content">
                             <div class="summary-head">
-                                <h5 class="summary-title">Website Security
-                                    Essential</h5>
-                            </div>
-                            <div class="summary-price">
-                                <p class="summary-text">$229 / mo</p>
-                                <span class="summary-small-text pull-right">1 month</span>
+                                <h5 class="summary-title">{{dataClient.email}}</h5>
                             </div>
                         </div>
                     </div>
                     <div class="summary-block">
                         <div class="summary-content">
                             <div class="summary-head">
-                                <h5 class="summary-title">Total</h5>
-                            </div>
-                            <div class="summary-price">
-                                <p class="summary-text">$258 / mo</p>
-                                <span class="summary-small-text pull-right">1 month</span>
+                                <h5 class="summary-title">{{dataClient.phone}}</h5>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                <button type="button" class="btn btn-person-secondary btn-block btn-lg mt-3" (click)="Clear()">Cancelar Compra</button>
+                <button type="button" class="btn btn-person btn-block btn-lg" (click)="Finalize()">Finalizar Compra</button>
             </div>
         </div>
     </div>

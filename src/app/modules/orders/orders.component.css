@@ -9,8 +9,6 @@ h6 { font-size: 12px; line-height: 18px; }
 p { margin: 0 0 20px; line-height: 1.8; }
 p:last-child { margin: 0px; }
 ul, ol { }
-a { text-decoration: none; color: #2e3139; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
-a:focus, a:hover { text-decoration: none; color: #0943c6; }
 .content{padding-top:80px; padding-bottom:80px};
 
 
@@ -53,3 +51,16 @@ input[type=radio].with-font:focus~label:before, input[type=checkbox].with-font:f
 .btn-default { background-color: #0943c6; color: #fff; border: 1px solid #0943c6; }
 .btn-default:hover { background-color: #063bb3; color: #fff; border: 1px solid #063bb3; }
 .btn-default.focus, .btn-default:focus { background-color: #063bb3; color: #fff; border: 1px solid #063bb3; }
+
+.btn-person{
+    background-color: #3B1D98;
+    color: #ffffff;
+}
+.btn-person-secondary{
+    background-color: #7654B4;
+    color: #ffffff;
+}
+.over{
+    overflow-y: auto;
+    height: 425px;
+}
